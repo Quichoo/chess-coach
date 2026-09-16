@@ -1,0 +1,67 @@
+.practice-page .lesson-selector {
+  min-width: 0;
+  margin: 22px 0 0;
+  padding: 16px;
+  border: 1px solid #35473b;
+  border-radius: 12px;
+  background: #1a2820;
+}
+
+.practice-page .lesson-selector legend {
+  padding: 0 6px;
+  color: #dce7de;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.practice-page .lesson-selector__fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.practice-page .lesson-selector label {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 7px;
+  color: #b9c8bd;
+  font-size: 13px;
+}
+
+.practice-page .lesson-selector select {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid #526859;
+  border-radius: 8px;
+  background: #142019;
+  color: #edf2ee;
+  font: inherit;
+  font-size: 14px;
+  color-scheme: dark;
+}
+
+.practice-page .lesson-selector select:focus-visible {
+  outline: 2px solid #aec78a;
+  outline-offset: 2px;
+}
+
+.practice-page .lesson-selector select:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.practice-page .lesson-selector__note {
+  margin: 12px 0 0;
+  color: #aab9af;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .practice-page .lesson-selector__fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

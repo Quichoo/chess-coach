@@ -1,0 +1,466 @@
+.app.practice-page {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 36px 24px 48px;
+  color: #edf2ee;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.practice-page .practice-header {
+  margin-bottom: 28px;
+}
+
+.practice-page .practice-eyebrow {
+  margin: 0 0 8px;
+  color: #aec78a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.practice-page .practice-heading-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.practice-page .practice-heading-row h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+}
+
+.practice-page .practice-badge {
+  padding: 4px 10px;
+  border: 1px solid #415446;
+  border-radius: 999px;
+  background: #1c2b22;
+  color: #d6e2d8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.practice-page .practice-variation {
+  margin: 10px 0 0;
+  color: #c2cfc5;
+  font-size: 15px;
+}
+
+.practice-page .practice-description {
+  max-width: 620px;
+  margin: 6px 0 0;
+  color: #aab9af;
+  font-size: 15px;
+}
+
+/* Lesson progress */
+
+.practice-page .practice-progress {
+  max-width: 520px;
+  margin-top: 20px;
+}
+
+.practice-page .practice-progress-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 8px;
+  color: #d6e2d8;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.practice-page .practice-progress progress {
+  display: block;
+  width: 100%;
+  height: 7px;
+  overflow: hidden;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  border-radius: 999px;
+  background: #304136;
+  accent-color: #aec78a;
+}
+
+.practice-page .practice-progress progress::-webkit-progress-bar {
+  border-radius: 999px;
+  background: #304136;
+}
+
+.practice-page .practice-progress progress::-webkit-progress-value {
+  border-radius: 999px;
+  background: #aec78a;
+}
+
+.practice-page .practice-progress progress::-moz-progress-bar {
+  border-radius: 999px;
+  background: #aec78a;
+}
+
+.practice-page .practice-progress p {
+  margin: 6px 0 0;
+  color: #aab9af;
+  font-size: 12px;
+}
+
+/* Main layout and board */
+
+.practice-page .practice-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 1fr);
+  align-items: start;
+  gap: 28px;
+}
+
+.practice-page .practice-board-panel,
+.practice-page .practice-sidebar {
+  min-width: 0;
+}
+
+.practice-page .practice-status {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 24px;
+  margin: 0 0 14px;
+  color: #dbe7dd;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.practice-page .practice-status-dot {
+  flex: 0 0 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #aec78a;
+}
+
+.practice-page .practice-status-dot--error {
+  background: #ed9d91;
+}
+
+.practice-page .practice-board-frame {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #485b4e;
+  border-radius: 14px;
+  background: #1c2a22;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 14%);
+}
+
+.practice-page .practice-feedback p {
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  border: 1px solid #405145;
+  border-radius: 10px;
+  background: #1c2b22;
+  color: #dce7de;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+/* Lesson controls */
+
+.practice-page .practice-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.practice-page .practice-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-height: 42px;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  cursor: pointer;
+}
+
+.practice-page .practice-button--primary {
+  background: #aec78a;
+  color: #182319;
+}
+
+.practice-page .practice-button--primary:hover:not(:disabled) {
+  background: #bed69b;
+}
+
+.practice-page .practice-button--secondary {
+  border-color: #617866;
+  background: transparent;
+  color: #e0e9e2;
+}
+
+.practice-page .practice-button--quiet {
+  background: transparent;
+  color: #b9c8bd;
+}
+
+.practice-page .practice-button--secondary:hover:not(:disabled),
+.practice-page .practice-button--quiet:hover:not(:disabled) {
+  background: #25372b;
+  color: #edf2ee;
+}
+
+.practice-page .practice-button:focus-visible {
+  outline: 2px solid #c5dfa1;
+  outline-offset: 3px;
+}
+
+.practice-page .practice-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* Coach panel: only the conversation scrolls */
+
+.practice-page .practice-sidebar > .coach-chat {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 100%;
+  height: clamp(560px, 78vh, 740px);
+  min-height: 0;
+  margin: 0;
+  padding: 22px;
+  border: 1px solid #35473b;
+  border-radius: 14px;
+  background: #1a2820;
+}
+
+.practice-page .coach-chat > h2,
+.practice-page .coach-chat > .coach-chat__status,
+.practice-page .coach-chat > .error,
+.practice-page .coach-chat > .coach-composer {
+  flex-shrink: 0;
+}
+
+.practice-page .coach-chat > .error {
+  max-height: 100px;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+.practice-page .coach-chat > .coach-messages {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #526b59 transparent;
+}
+
+.practice-page .coach-chat > .coach-messages:empty::before {
+  display: block;
+  padding: 24px 0;
+  color: #aab9af;
+  font-size: 15px;
+  content: "Play your first move, or ask a question about this opening.";
+}
+
+.practice-page .coach-chat__status {
+  margin: 0 0 16px;
+}
+
+.practice-page .coach-message {
+  margin: 0;
+  padding: 16px 0;
+}
+
+.practice-page .coach-message + .coach-message {
+  border-top: 1px solid #35473b;
+}
+
+.practice-page .coach-message strong {
+  color: #c5dfa1;
+  font-size: 13px;
+}
+
+.practice-page .coach-message--user strong {
+  color: #d3dfd6;
+}
+
+.practice-page .coach-chat__message-text {
+  margin: 6px 0 0;
+  color: #dce6df;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.practice-page .coach-composer__send {
+  background: #aec78a;
+  color: #182319;
+}
+
+.practice-page .coach-composer__send:hover:not(:disabled) {
+  background: #bed69b;
+}
+
+.practice-page .coach-composer__send:disabled {
+  background: #35483a;
+  color: #a5b3a9;
+}
+
+.practice-page .coach-composer__input {
+  max-height: 180px;
+}
+
+/* Compact move history */
+
+.practice-page .practice-move-history {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 22px 0 0;
+  padding: 18px;
+  border: 1px solid #35473b;
+  border-radius: 12px;
+  background: #1a2820;
+}
+
+.practice-page .practice-sidebar h2,
+.practice-page .practice-move-history h2,
+.practice-page .practice-completion h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.practice-page .practice-history-empty {
+  margin: 0;
+  color: #aab9af;
+  font-size: 14px;
+}
+
+.practice-page .practice-history-scroll {
+  max-height: 220px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #526b59 transparent;
+}
+
+.practice-page .practice-moves-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+
+.practice-page .practice-moves-table th,
+.practice-page .practice-moves-table td {
+  padding: 5px 8px;
+  border: 0;
+}
+
+.practice-page .practice-moves-table thead th {
+  padding-bottom: 10px;
+  color: #aab9af;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.practice-page .practice-moves-table tbody th {
+  width: 20%;
+  color: #aab9af;
+  font-weight: 400;
+}
+
+.practice-page .practice-moves-table tbody tr + tr {
+  border-top: 1px solid #2d3d32;
+}
+
+.practice-page .practice-move {
+  display: inline-block;
+  min-width: 42px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  color: #e0e9e2;
+}
+
+.practice-page .practice-move--latest {
+  background: #34482d;
+  color: #d7efb5;
+  font-weight: 700;
+}
+
+/* Completion and accessibility */
+
+.practice-page .practice-completion {
+  margin-top: 20px;
+  padding: 22px;
+  border: 1px solid #566c45;
+  border-radius: 14px;
+  background: #202f22;
+}
+
+.practice-page .practice-completion p {
+  margin: 0 0 14px;
+  color: #cbd8cd;
+  font-size: 15px;
+}
+
+.practice-page .practice-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 800px) {
+  .practice-page .practice-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+
+  .practice-page .practice-sidebar > .coach-chat {
+    height: 600px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app.practice-page {
+    padding: 24px 14px 36px;
+  }
+
+  .practice-page .practice-board-frame {
+    padding: 6px;
+  }
+
+  .practice-page .practice-sidebar > .coach-chat {
+    padding: 18px;
+  }
+
+  .practice-page .practice-button {
+    padding: 10px 13px;
+  }
+}

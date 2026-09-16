@@ -1,0 +1,126 @@
+.app {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+header {
+  margin-bottom: 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+header p {
+  color: #a8b3ac;
+}
+
+.practice-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 560px) minmax(220px, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.status {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+.error {
+  min-height: 24px;
+  color: #ffb4ab;
+}
+
+button {
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #a3e635;
+  color: #17210d;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #bef264;
+}
+
+.history {
+  padding: 20px;
+  border: 1px solid #344339;
+  border-radius: 12px;
+  background: #1c2721;
+}
+
+.history h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.history ol {
+  padding-left: 28px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.history li {
+  padding: 8px 0;
+}
+
+.history li span {
+  display: inline-block;
+  width: 72px;
+}
+
+@media (max-width: 720px) {
+  .practice-layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.coach-messages {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.coach-message {
+  padding: 14px;
+  border-radius: 10px;
+  overflow-wrap: anywhere;
+}
+
+.coach-message--user {
+  background: #29372e;
+}
+
+.coach-message--assistant {
+  background: #14231a;
+  border-left: 3px solid #a3e635;
+}
+
+.coach-message strong {
+  font-size: 13px;
+  color: #a3e635;
+}
+
+.coach-message p {
+  margin: 8px 0 0;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.hint-button,
+.reveal-button {
+  margin-right: 1rem;
+}

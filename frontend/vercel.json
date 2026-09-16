@@ -1,0 +1,19 @@
+{
+  "rewrites": [
+    {
+      "source": "/eve/:path*",
+      "destination": "https://backend-beta-seven-86.vercel.app/eve/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/eve/:path*",
+      "headers": [
+        {
+          "key": "x-vercel-enable-rewrite-caching",
+          "value": "0"
+        }
+      ]
+    }
+  ]
+}
