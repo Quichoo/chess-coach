@@ -29,6 +29,7 @@ export function createLine(
 
       throw new Error(
         `Invalid lesson "${id}" at ply ${index + 1} (${san}): ${reason}`,
+        { cause },
       );
     }
 

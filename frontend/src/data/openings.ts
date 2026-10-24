@@ -1,7 +1,9 @@
+import { englishOpening } from "./openings/english";
+import { frenchOpening } from "./openings/french";
 import { italianOpening } from "./openings/italian";
 import { modernOpening } from "./openings/modern";
 import { scotchOpening } from "./openings/scotch";
-import { frenchOpening } from "./openings/french";
+import { sicilianOpening } from "./openings/sicilian";
 
 import type {
   LearnerColor,
@@ -21,10 +23,12 @@ export type {
 } from "./openings/types";
 
 export const openingCatalog: [OpeningDefinition, ...OpeningDefinition[]] = [
+  englishOpening,
+  frenchOpening,
   italianOpening,
   modernOpening,
   scotchOpening,
-  frenchOpening,
+  sicilianOpening,
 ];
 
 export const defaultLineId = italianOpening.groups[0].lines[0].id;
